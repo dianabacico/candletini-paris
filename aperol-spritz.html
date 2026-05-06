@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aperol Spritz • Candletini</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root{
+    --gold:#C9A96C;
+    --dark:#1A1816;
+    --light:#FDFCF9;
+    --beige:#F5F0E6;
+    --text:#5C564D;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Cormorant Garamond',serif;
+    background:var(--light);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(253,252,249,.96);
+    backdrop-filter:blur(15px);
+    z-index:1000;
+    padding:1rem 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 4px 20px rgba(0,0,0,.04);
+}
+
+.logo{
+    font-family:'Cinzel',serif;
+    font-size:2rem;
+    color:var(--dark);
+    letter-spacing:4px;
+    font-weight:700;
+    text-decoration:none;
+}
+
+.logo span{
+    color:var(--gold);
+}
+
+nav ul{
+    display:flex;
+    gap:1.5rem;
+    list-style:none;
+    align-items:center;
+}
+
+nav a{
+    color:var(--text);
+    text-decoration:none;
+    font-size:.9rem;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--gold);
+}
+
+.cart-btn{
+    background:var(--gold);
+    color:var(--dark);
+    padding:.7rem 1.4rem;
+    border-radius:50px;
+    font-weight:600;
+}
+
+#cartCount{
+    margin-left:.3rem;
+}
+
+/* PRODUCT PAGE */
+
+.product-page{
+    padding:8rem 5% 2.5rem;
+    background:var(--light);
+}
+
+.product-layout{
+    max-width:1150px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:58% 42%;
+    gap:2.5rem;
+    align-items:start;
+}
+
+/* GALLERY */
+
+.product-gallery{
+    display:grid;
+    grid-template-columns:90px 1fr;
+    gap:1rem;
+}
+
+.thumbs{
+    display:flex;
+    flex-direction:column;
+    gap:.8rem;
+}
+
+.thumbs img{
+    width:90px;
+    height:110px;
+    object-fit:cover;
+    border-radius:14px;
+    cursor:pointer;
+    border:1px solid #e8dfd3;
+    opacity:.7;
+    transition:.3s;
+}
+
+.thumbs img:hover,
+.thumbs img.active-thumb{
+    opacity:1;
+    border:2px solid var(--gold);
+}
+
+.main-image{
+    background:white;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.main-image img{
+    width:100%;
+    height:650px;
+    object-fit:cover;
+    display:block;
+}
+
+/* INFO */
+
+.product-info{
+    padding-top:.5rem;
+}
+
+.category{
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:.9rem;
+    margin-bottom:.8rem;
+}
+
+.product-info h1{
+    font-family:'Cinzel',serif;
+    font-size:3.2rem;
+    line-height:1.1;
+    color:var(--dark);
+    margin-bottom:1rem;
+}
+
+.short-desc{
+    font-size:1.2rem;
+    line-height:1.5;
+    margin-bottom:1.4rem;
+}
+
+.price{
+    font-size:2.5rem;
+    color:var(--dark);
+    font-weight:700;
+    margin-bottom:1.4rem;
+}
+
+.details{
+    border-top:1px solid #e7dfd2;
+    border-bottom:1px solid #e7dfd2;
+    padding:1rem 0;
+    margin-bottom:1.5rem;
+}
+
+.details p{
+    margin:.5rem 0;
+    font-size:1.08rem;
+}
+
+.details strong{
+    color:var(--dark);
+}
+
+.add-btn{
+    width:100%;
+    background:var(--dark);
+    color:white;
+    border:none;
+    padding:1rem;
+    border-radius:6px;
+    font-size:1rem;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    cursor:pointer;
+    transition:.3s;
+    margin-bottom:.8rem;
+}
+
+.add-btn:hover{
+    background:var(--gold);
+    color:var(--dark);
+}
+
+.continue-btn{
+    display:block;
+    width:100%;
+    text-align:center;
+    border:1px solid var(--dark);
+    color:var(--dark);
+    background:transparent;
+    padding:1rem;
+    border-radius:6px;
+    text-decoration:none;
+    font-size:1rem;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    transition:.3s;
+}
+
+.continue-btn:hover{
+    background:var(--beige);
+    color:var(--dark);
+}
+
+.mini-note{
+    text-align:center;
+    margin-top:1rem;
+    font-size:1rem;
+}
+
+/* RECOMMENDED PRODUCTS */
+
+.recommended{
+    max-width:1150px;
+    margin:1.5rem auto 0;
+    padding:2.5rem 5% 1rem;
+}
+
+.recommended h2{
+    font-family:'Cinzel',serif;
+    color:var(--dark);
+    font-size:2rem;
+    text-align:center;
+    margin-bottom:2rem;
+    letter-spacing:2px;
+}
+
+.recommended-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1.2rem;
+}
+
+.product-card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    text-decoration:none;
+    color:var(--text);
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.product-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 40px rgba(0,0,0,.1);
+}
+
+.product-card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    display:block;
+}
+
+.product-card-info{
+    padding:1rem;
+    text-align:center;
+}
+
+.product-card-info h3{
+    font-family:'Cinzel',serif;
+    color:var(--dark);
+    font-size:1.1rem;
+    margin-bottom:.4rem;
+}
+
+.product-card-info p{
+    font-size:1rem;
+    color:var(--gold);
+    font-weight:700;
+}
+
+/* FOOTER */
+
+footer{
+    background:var(--dark);
+    color:white;
+    padding:2rem 5%;
+    text-align:center;
+    margin-top:2rem;
+}
+
+.contact-info{
+    display:flex;
+    gap:1rem;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin:1rem 0;
+}
+
+.contact-info a{
+    color:white;
+    text-decoration:none;
+    background:rgba(201,169,108,.15);
+    padding:.7rem 1.1rem;
+    border-radius:50px;
+    transition:.3s;
+}
+
+.contact-info a:hover{
+    background:var(--gold);
+    color:var(--dark);
+}
+
+.contact-info i{
+    color:var(--gold);
+    margin-right:.5rem;
+}
+
+footer a{
+    color:var(--gold);
+    text-decoration:none;
+}
+
+/* NOTIFICATION */
+
+#notification{
+    position:fixed;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%) scale(0);
+    background:var(--dark);
+    color:white;
+    padding:1rem 2rem;
+    border-radius:50px;
+    z-index:9999;
+    transition:.4s;
+}
+
+#notification.show{
+    transform:translateX(-50%) scale(1);
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+    header{
+        flex-direction:column;
+        gap:1rem;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:1rem;
+    }
+
+    .product-page{
+        padding-top:12rem;
+    }
+
+    .product-layout{
+        grid-template-columns:1fr;
+    }
+
+    .product-gallery{
+        grid-template-columns:1fr;
+    }
+
+    .thumbs{
+        flex-direction:row;
+        overflow-x:auto;
+    }
+
+    .thumbs img{
+        width:80px;
+        height:95px;
+    }
+
+    .main-image img{
+        height:430px;
+    }
+
+    .product-info h1{
+        font-size:2.4rem;
+    }
+
+    .recommended-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .product-card img{
+        height:210px;
+    }
+}
+
+@media(max-width:480px){
+    .recommended-grid{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <a href="index.html" class="logo">
+        Candle<span>tini.</span>
+    </a>
+
+    <nav>
+        <ul>
+            <li><a href="index.html#hero">Accueil</a></li>
+            <li><a href="index.html#produits">Produits</a></li>
+            <li><a href="index.html#a-propos">À Propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+            <li>
+                <a class="cart-btn" href="panier.html">
+                    Panier <span id="cartCount">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+</header>
+
+<section class="product-page">
+
+    <div class="product-layout">
+
+        <div class="product-gallery">
+
+            <div class="thumbs">
+
+                <img src="img/spritz4.png.jpeg"
+                onclick="changeImage(this)"
+                class="active-thumb">
+
+                <img src="img/spritz2.png.jpeg"
+                onclick="changeImage(this)">
+
+                <img src="img/spritz1.png.png"
+                onclick="changeImage(this)">
+
+                <img src="img/spritz 6.png"
+                onclick="changeImage(this)">
+
+            </div>
+
+            <div class="main-image">
+
+                <img id="mainProductImage"
+                src="img/spritz2.png.jpeg"
+                alt="Aperol Spritz">
+
+            </div>
+
+        </div>
+
+        <div class="product-info">
+
+            <p class="category">
+                Bougie réaliste parfumée
+            </p>
+
+            <h1>
+                Aperol Spritz
+            </h1>
+
+            <p class="short-desc">
+                Une bougie fraîche et pétillante inspirée par l’élégance d’un Aperol Spritz au coucher du soleil.
+            </p>
+
+            <div class="price">
+                30,00 €
+            </div>
+
+            <div class="details">
+
+                <p>
+                    <strong>Parfum :</strong>
+                    fleur de cerisier, crème de lait, vanille
+                </p>
+
+                <p>
+                    <strong>Cire :</strong>
+                    100% naturelle
+                </p>
+
+                <p>
+                    <strong>Mèche :</strong>
+                    bois de cèdre
+                </p>
+
+
+            </div>
+
+            <button class="add-btn"
+            onclick="addToCart('Aperol Spritz',119)">
+                Ajouter au panier
+            </button>
+
+            <a href="index.html#produits" class="continue-btn">
+                Continuer mes achats
+            </a>
+
+            <p class="mini-note">
+                Verre réutilisable après utilisation.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="recommended">
+
+    <h2>Vous pourriez aussi aimer</h2>
+
+    <div class="recommended-grid">
+
+        <a href="Iced-Latte.html" class="product-card">
+            <img src="img/IMG_4301.png" alt="Iced Latte">
+            <div class="product-card-info">
+                <h3>Iced Latte</h3>
+                <p>30,00 €</p>
+            </div>
+        </a>
+
+        <a href="sakura -cream-latte.html" class="product-card">
+            <img src="img/bougie5.png.png" alt="sakura-cream-latte">
+            <div class="product-card-info">
+                <h3>Sakura Cream Latte</h3>
+                <p>30,00 €</p>
+            </div>
+        </a>
+
+        <a href="rose-imperiale.html" class="product-card">
+            <img src="img/rose.jpg" alt="Rose Impériale">
+            <div class="product-card-info">
+                <h3>Rose Impériale</h3>
+                <p>25,00 €</p>
+            </div>
+        </a>
+
+        <a href="sakura-cream-latte.html" class="product-card">
+            <img src="img/bougie1.png.png" alt="Sakura Cream Latte">
+            <div class="product-card-info">
+                <h3>Sakura Cream Latte</h3>
+                <p>30,00 €</p>
+            </div>
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>
+        © 2026 Candletini. Tous droits réservés.
+    </p>
+
+    <div class="contact-info">
+
+        <a href="tel:+33766889162">
+            <i class="fas fa-phone"></i>
+            +33 7 66 88 91 62
+        </a>
+
+        <a href="mailto:candleessencee@gmail.com">
+            <i class="fas fa-envelope"></i>
+            candleessencee@gmail.com
+        </a>
+
+        <a href="https://instagram.com/candleessence___" target="_blank">
+            <i class="fab fa-instagram"></i>
+            @candleessence___
+        </a>
+
+    </div>
+
+    <p>
+        <a href="index.html">
+            ← Retour à l'accueil
+        </a>
+    </p>
+
+</footer>
+
+<div id="notification">
+    Ajouté au panier
+</div>
+
+<script>
+function changeImage(img){
+
+    document.getElementById('mainProductImage').src = img.src;
+
+    document.querySelectorAll('.thumbs img').forEach(image => {
+        image.classList.remove('active-thumb');
+    });
+
+    img.classList.add('active-thumb');
+}
+
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+const updateCartCount = () => {
+
+    const count = cart.reduce((sum, item) =>
+        sum + (item.qty || 1), 0);
+
+    document.getElementById('cartCount').textContent = count;
+};
+
+window.addToCart = (name, price) => {
+
+    const existingItem = cart.find(item => item.name === name);
+
+    if(existingItem){
+
+        existingItem.qty = (existingItem.qty || 1) + 1;
+
+    } else {
+
+        cart.push({
+            name:name,
+            price:price,
+            qty:1
+        });
+
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    updateCartCount();
+
+    const notification =
+    document.getElementById('notification');
+
+    notification.textContent =
+    name + ' ajouté au panier !';
+
+    notification.classList.add('show');
+
+    setTimeout(() => {
+        notification.classList.remove('show');
+    }, 2000);
+};
+
+updateCartCount();
+</script>
+
+</body>
+</html>

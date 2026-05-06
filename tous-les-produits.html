@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nos Créations • Candletini</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root{--gold:#C9A96C;--dark:#1A1816;--light:#FDFCF9;--beige:#F5F0E6;--text:#5C564D}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Cormorant Garamond',serif;background:var(--light);color:var(--text);overflow-x:hidden}
+
+header{position:fixed;top:0;left:0;width:100%;background:rgba(253,252,249,.96);backdrop-filter:blur(20px);z-index:1000;padding:1rem 5%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 8px 25px rgba(0,0,0,.08)}
+.logo{font-family:'Cinzel',serif;font-size:2.2rem;color:var(--dark);letter-spacing:4px;font-weight:700;text-decoration:none}
+.logo span{color:var(--gold)}
+nav ul{display:flex;gap:1.6rem;list-style:none;align-items:center}
+nav a{color:var(--text);text-decoration:none;font-size:.95rem;text-transform:uppercase;letter-spacing:2px;transition:.3s}
+nav a:hover{color:var(--gold)}
+.cart-btn{background:var(--gold);color:var(--dark);padding:.7rem 1.6rem;border-radius:50px;font-weight:600;position:relative}
+.cart-count{position:absolute;top:-8px;right:-8px;background:var(--dark);color:white;width:20px;height:20px;border-radius:50%;font-size:.75rem;display:flex;align-items:center;justify-content:center}
+
+.hero{height:42vh;min-height:360px;background:url('img/roz.jpg') center/cover;position:relative;display:flex;align-items:center;justify-content:center;text-align:center}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.25),rgba(0,0,0,.72))}
+.hero h1{position:relative;z-index:2;font-family:'Cinzel',serif;color:white;font-size:clamp(3rem,8vw,5.5rem);letter-spacing:8px}
+
+#produits{padding:4rem 5%;background:var(--beige);text-align:center}
+.section-title{font-family:'Cinzel',serif;font-size:3rem;margin-bottom:1rem;color:var(--dark);letter-spacing:4px}
+.section-text{font-size:1.25rem;max-width:750px;margin:0 auto 3rem;line-height:1.7}
+.produits-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2.2rem;max-width:1200px;margin:0 auto}
+.produit-card{background:white;border-radius:20px;overflow:hidden;box-shadow:0 15px 35px rgba(0,0,0,.1);position:relative;transition:.5s;text-decoration:none;color:inherit}
+.produit-card:hover{transform:translateY(-12px);box-shadow:0 25px 50px rgba(0,0,0,.18)}
+.produit-card img{width:100%;height:340px;object-fit:cover;transition:.8s}
+.produit-card:hover img{transform:scale(1.1)}
+.produit-info{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.88));padding:3rem 1.5rem 1.8rem;color:white}
+.produit-info h3{font-family:'Cinzel',serif;font-size:1.8rem;margin-bottom:.4rem}
+.produit-info p{font-size:1rem;margin-bottom:.8rem}
+.price{font-size:1.65rem;color:var(--gold);font-weight:700;margin:1rem 0}
+.details-btn{display:inline-block;background:var(--gold);color:var(--dark);padding:.85rem 2rem;border-radius:50px;font-size:.95rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;text-decoration:none;transition:.4s}
+.details-btn:hover{background:white;color:var(--dark)}
+
+footer{background:var(--dark);color:white;padding:2rem 5%;text-align:center;font-size:.95rem}
+footer a{color:var(--gold);text-decoration:none;margin:0 .6rem}
+
+@media(max-width:768px){
+header{flex-direction:column;gap:1rem}
+nav ul{flex-wrap:wrap;justify-content:center;gap:1rem}
+.hero h1{letter-spacing:4px}
+.section-title{font-size:2.3rem}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="logo">Candle<span>tini.</span></a>
+    <nav>
+        <ul>
+            <li><a href="index.html#hero">Accueil</a></li>
+            <li><a href="produits.html">Produits</a></li>
+            <li><a href="index.html#a-propos">À Propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="panier.html" class="cart-btn">Panier <span class="cart-count" id="cartCount">0</span></a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Nos Créations</h1>
+</section>
+
+<section id="produits">
+    <h2 class="section-title">Explorez nos produits</h2>
+    <p class="section-text">
+        Découvrez nos bougies sculpturales Candletini, créées pour apporter douceur, élégance et lumière à votre intérieur.
+    </p>
+
+    <div class="produits-grid">
+
+        <a href="lavande-royale.html" class="produit-card">
+            <img src="img/roz.jpg" alt="Lavande Royale">
+            <div class="produit-info">
+                <h3>Lavande Royale</h3>
+                <p>Harmonie florale des jardins provençaux</p>
+                <div class="price">89,00 €</div>
+                <span class="details-btn">Voir détails</span>
+            </div>
+        </a>
+
+        <a href="lili-eternelle.html" class="produit-card">
+            <img src="img/roz2.jpg" alt="Lili Éternelle">
+            <div class="produit-info">
+                <h3>Lili Éternelle</h3>
+                <p>Élégance intemporelle • Lys & vanille</p>
+                <div class="price">119,00 €</div>
+                <span class="details-btn">Voir détails</span>
+            </div>
+        </a>
+
+        <a href="rose-imperiale.html" class="produit-card">
+            <img src="img/roz3.jpg" alt="Rose Impériale">
+            <div class="produit-info">
+                <h3>Rose Impériale</h3>
+                <p>Rose de Damas • Oud • Or 24k</p>
+                <div class="price">99,00 €</div>
+                <span class="details-btn">Voir détails</span>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Candletini. Tous droits réservés.</p>
+    <p><a href="#">Mentions Légales</a> • <a href="#">CGV</a> • <a href="#">Confidentialité</a></p>
+</footer>
+
+<script>
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+const updateCartCount = () => {
+    const countEl = document.getElementById('cartCount');
+    if (!countEl) return;
+
+    const count = cart.reduce((sum, item) => sum + (item.qty || 1), 0);
+    countEl.textContent = count;
+};
+
+updateCartCount();
+</script>
+
+</body>
+</html>

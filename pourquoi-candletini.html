@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pourquoi Candletini ?</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold: #C9A96C;
+      --dark: #1A1816;
+      --light: #FDFCF9;
+      --beige: #F5F0E6;
+      --text: #5C564D;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Cormorant Garamond', serif;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    header {
+      background: rgba(253,252,249,0.96);
+      padding: 1.2rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .logo {
+      font-family: 'Cinzel', serif;
+      font-size: 2rem;
+      color: var(--dark);
+      letter-spacing: 4px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .back-link {
+      color: var(--text);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+    }
+
+    .back-link:hover {
+      color: var(--gold);
+    }
+
+    .page-hero {
+      background: var(--beige);
+      padding: 5rem 5% 4rem;
+      text-align: center;
+    }
+
+    .page-hero h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.6rem, 6vw, 4.5rem);
+      color: var(--dark);
+      letter-spacing: 5px;
+      margin-bottom: 1rem;
+    }
+
+    .gold-line {
+      width: 160px;
+      height: 2px;
+      background: var(--gold);
+      margin: 1.5rem auto 0;
+    }
+
+    .content {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 4rem 5%;
+      font-size: 1.35rem;
+    }
+
+    .content p {
+      margin-bottom: 1.8rem;
+    }
+
+    .highlight {
+      color: var(--dark);
+      font-weight: 700;
+    }
+
+    .quote-box {
+      margin: 3rem auto;
+      padding: 2rem;
+      background: white;
+      border-left: 4px solid var(--gold);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+      font-style: italic;
+      font-size: 1.5rem;
+      color: var(--gold);
+      text-align: center;
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 2rem 5%;
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .content {
+        font-size: 1.2rem;
+        padding: 3rem 7%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="logo">Candle<span>tini.</span></a>
+    <a href="index.html" class="back-link">Retour à l’accueil</a>
+  </header>
+
+  <section class="page-hero">
+    <h1>Pourquoi Candletini ?</h1>
+    <div class="gold-line"></div>
+  </section>
+
+  <main class="content">
+
+    <p>
+      <span class="highlight">Candletini transforme la bougie en véritable objet de décoration.</span>
+    </p>
+
+    <p>
+      Candletini est une marque de bougies artisanales créée par une femme, inspirée par la créativité, l’élégance et l’art de transformer les petits détails du quotidien en pièces décoratives raffinées.
+
+Spécialisée dans les bougies réalistes, sculpturales et parfumées, Candletini imagine des créations qui apportent personnalité, chaleur et une touche de luxe à chaque intérieur.
+    </p>
+
+    <div class="quote-box">
+      “Une bougie pensée pour illuminer, décorer et rester.”
+    </div>
+
+    <p>
+      Toutes les bougies Candletini sont réalisées dans des verres réutilisables pensés pour être conservés, réutilisés ou détournés au quotidien. Une fois la bougie terminée, les verres peuvent facilement trouver une seconde vie : pour des boissons, du café, des accessoires, du maquillage ou simplement comme objets décoratifs.
+    </p>
+
+    <p>
+      Chez Candletini, la réutilisation fait partie intégrante de l’expérience. Chaque verre est choisi non seulement pour son esthétique, mais aussi pour son utilité après la combustion de la bougie.
+    </p>
+
+    <p>
+      Candletini représente un univers féminin, artistique et raffiné où la lumière, le parfum et le design se réunissent pour créer des pièces chaleureuses, élégantes et intemporelles.
+    </p>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Candletini. Tous droits réservés.</p>
+    <p><a href="index.html">Retour à l’accueil</a></p>
+  </footer>
+
+</body>
+</html>

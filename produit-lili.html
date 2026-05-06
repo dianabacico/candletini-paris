@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bougie Lavande - Bougies Parfumées</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff0f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ffccd5;
+            padding: 1em 0;
+            text-align: center;
+        }
+        h1 {
+    font-family: 'Georgia', serif; /* Font elegant */
+    font-size: 1.8em; /* Dimensiune mai mare */
+    color: #ff6f91; /* Roz frumos */
+    text-align: center; /* Aliniere pe centru */
+    margin-bottom: 1em; /* Spațiu dedesubt */
+    text-transform: uppercase; /* Transformare în litere mari */
+    font-size: 2em;
+            font-family: 'Pacifico', cursive;
+            color: #ff6f91;
+            text-shadow: 2px 2px 4px rgba(138, 11, 11, 0.8);
+            letter-spacing: 5px;
+            text-transform: uppercase;
+}
+     
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+            background-color: #ffe4e6;
+            padding: 1em 0;
+            font-family: 'Playfair Display', serif; /* Font elegant pentru meniu */
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #770c0c;
+            position: relative;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            color: #ff6f91;
+        }
+
+        nav a:after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #ff6f91;
+            transition: width 0.3s;
+        }
+
+        nav a:hover:after {
+            width: 100%;
+        }
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            padding: 1em;
+            background-color: #fff0f5 ;
+            font-size: 0.9em;
+            margin-top: 125px; /* Adaugă un spațiu de 20px sub nav */
+            position: absolute;
+            top: 70px; /* Ajustează această valoare în funcție de poziția dorită */
+            left: 20px;
+            border-radius: 20px; /* Colțuri rotunjite */
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+            color: #555;
+            margin-right: 0.5em;
+        }
+        .breadcrumb a.home-link {
+    text-decoration: underline;
+    text-decoration-thickness: 1px; /* Grosimea sublinierii */
+    text-decoration-color: #555; /* Culoarea sublinierii */
+}
+        .breadcrumb span {
+            margin-right: 0.5em;
+            color: #999;
+        }
+
+        .breadcrumb a:hover {
+            color: #333;
+        }
+        .breadcrumb .home-icon {
+    width: 18px;
+    height: 18px;
+    background-image: url('img/OIP.jpg'); /* Folosește o iconiță de casă */
+    background-size: cover;
+    margin-right: 5px;
+}
+
+        .product-detail-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3em;
+            margin: 2em 5%;
+        }
+
+        .product-detail-container img {
+            max-width: 50%;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-detail-text {
+            max-width: 45%;
+            font-family: 'Georgia', serif;
+            color: #333;
+        }
+
+        .product-detail-text h2 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+            color: #ff6f91;
+        }
+
+        .product-detail-text .price {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #ff6f91;
+            margin-bottom: 1.5em;
+        }
+
+        .product-detail-text p {
+            font-size: 1.2em;
+            margin-bottom: 1.5em;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .product-detail-text .small-text {
+            font-size: 0.9em;
+            color: #888;
+            margin-top: 1em;
+        }
+
+        .button {
+            background-color: #ff6f91;
+            padding: 1em 2em;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 1em;
+        }
+
+        .button:hover {
+            background-color: #e05a78;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #ffccd5;
+            margin-top: 3em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bougies Parfumées</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="produits.html">Produits</a>
+        <a href="about.html">À propos</a>
+        <a href="contact.html">Contact</a>
+       <li><a class="cart-btn" href="panier.html">Panier <span class="cart-count" id="cartCount">0</span></a></li>
+    </nav>
+    <div class="breadcrumb">
+        <a href="index.html" class="home-link"><span class="home-icon"></span>Accueil</a>
+        <span>&#47;</span>
+        <span>Bougies Parfumées</span>
+    </div>
+    <div class="product-detail-container">
+        <!-- Imaginea produsului -->
+        <img src="img/roz2.jpg" alt="Bougie Lavande">
+
+        <!-- Descrierea detaliată a produsului -->
+        <div class="product-detail-text">
+            <h2>Bougie Lavande</h2>
+            <div class="price">18€</div>
+            <p>Plongez dans une atmosphère apaisante avec notre bougie parfumée Lavande. Fabriquée à la main à partir de cire naturelle, cette bougie dégage un parfum doux et relaxant, idéal pour créer une ambiance zen dans votre maison. La lavande, reconnue pour ses propriétés calmantes, transformera votre intérieur en un véritable havre de paix.</p>
+            <p>Cette bougie est parfaite pour les moments de détente après une longue journée ou comme cadeau attentionné pour vos proches. Le design épuré et élégant s'intègre facilement dans tous les styles de décoration.</p>
+            
+             <!-- Selectarea cantității -->
+             <div class="quantity">
+                <label for="quantity">Quantité:</label>
+                <input type="number" id="quantity" name="quantity" class="quantity-input" value="1" min="1">
+            </div>
+            <a href="cart.html" class="button">Ajouter au Panier</a>
+            <p class="small-text">Taxes incluses. Frais d’expédition calculés à l’étape de paiement</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Bougies Parfumées. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
