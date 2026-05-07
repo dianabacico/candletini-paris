@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentions Légales • Candletini</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C9A96C;--dark:#1A1816;--light:#FDFCF9;--beige:#F5F0E6;--text:#5C564D}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Cormorant Garamond',serif;background:var(--light);color:var(--text);line-height:1.7}
+header{position:fixed;top:0;left:0;width:100%;background:rgba(253,252,249,.96);z-index:1000;padding:1rem 5%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 8px 25px rgba(0,0,0,.08)}
+.logo{font-family:'Cinzel',serif;font-size:2.2rem;color:var(--dark);letter-spacing:4px;font-weight:700;text-decoration:none}
+.logo span{color:var(--gold)}
+nav ul{display:flex;gap:1.5rem;list-style:none;align-items:center}
+nav a{color:var(--text);text-decoration:none;font-size:.95rem;text-transform:uppercase;letter-spacing:2px}
+nav a:hover{color:var(--gold)}
+.cart-btn{background:var(--gold);color:var(--dark);padding:.7rem 1.4rem;border-radius:50px;font-weight:600}
+
+.hero{height:05vh;min-height:220px;background:url('img/roz.jpg') center/cover;position:relative;display:flex;align-items:center;justify-content:center;text-align:center}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.25),rgba(0,0,0,.72))}
+.hero h1{
+    position:relative;
+    z-index:2;
+    font-family:'Cinzel',serif;
+    color:white;
+    font-size:clamp(2rem,4vw,3rem);
+    letter-spacing:3px;
+    transform: translateY(50px);
+}
+
+main{background:var(--beige);padding:4rem 5%}
+.content{max-width:900px;margin:0 auto;background:white;border-radius:20px;padding:3rem;box-shadow:0 15px 35px rgba(0,0,0,.1)}
+.content h2{font-family:'Cinzel',serif;color:var(--dark);font-size:1.5rem;margin:2rem 0 .8rem}
+.content p{font-size:1.18rem;margin-bottom:.6rem}
+.warning{background:rgba(201,169,108,.12);padding:1rem;border-radius:12px;margin-bottom:2rem}
+
+footer{background:var(--dark);color:white;padding:2rem 5%;text-align:center}
+footer a{color:var(--gold);text-decoration:none;margin:0 .6rem}
+
+@media(max-width:768px){
+header{flex-direction:column;gap:1rem}
+nav ul{flex-wrap:wrap;justify-content:center;gap:1rem}
+.content{padding:2rem 1.5rem}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="logo">Candle<span>tini.</span></a>
+    <nav>
+        <ul>
+            <li><a href="index.html#hero">Accueil</a></li>
+            <li><a href="produits.html">Produits</a></li>
+            <li><a href="index.html#a-propos">À Propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="panier.html" class="cart-btn">Panier</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Mentions Légales</h1>
+</section>
+
+<main>
+    <div class="content">
+
+        <h2>Éditeur du site</h2>
+        <p><strong>Nom du site :</strong> Candletini</p>
+        <p><strong>Responsable de publication :</strong> [Ton prénom et nom]</p>
+        <p><strong>Adresse :</strong> [Ton adresse professionnelle ou personnelle]</p>
+        <p><strong>Email :</strong> candleessencee@gmail.com</p>
+        <p><strong>Téléphone :</strong> +33 7 66 88 91 62</p>
+
+        <h2>Statut professionnel</h2>
+        <p><strong>Forme juridique :</strong> [Auto-entrepreneur / Société / Particulier]</p>
+        <p><strong>SIRET :</strong> [À compléter si tu as une entreprise]</p>
+
+        <h2>Hébergement</h2>
+        <p><strong>Hébergeur :</strong> [Nom de l’hébergeur : Netlify, Vercel, OVH, etc.]</p>
+        <p><strong>Adresse de l’hébergeur :</strong> [Adresse de l’hébergeur]</p>
+
+        <h2>Propriété intellectuelle</h2>
+        <p>Le contenu du site Candletini, incluant les textes, images, logos, graphismes et éléments visuels, est protégé. Toute reproduction ou utilisation sans autorisation est interdite.</p>
+
+        <h2>Données personnelles</h2>
+        <p>Les informations transmises via le formulaire de contact ou lors d’une commande sont utilisées uniquement pour répondre aux demandes des clients et traiter les commandes.</p>
+
+        <h2>Contact</h2>
+        <p>Pour toute question concernant le site, vous pouvez nous contacter à l’adresse suivante : candleessencee@gmail.com.</p>
+
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 Candletini. Tous droits réservés.</p>
+    <p>
+        <a href="mentions-legales.html">Mentions Légales</a> •
+        <a href="cgv.html">CGV</a> •
+        <a href="confidentialite.html">Confidentialité</a>
+    </p>
+</footer>
+
+</body>
+</html>

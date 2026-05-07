@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entretien des bougies • Candletini</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold: #C9A96C;
+      --dark: #1A1816;
+      --light: #FDFCF9;
+      --beige: #F5F0E6;
+      --text: #5C564D;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Cormorant Garamond', serif;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    header {
+      background: rgba(253,252,249,0.96);
+      padding: 1.2rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .logo {
+      font-family: 'Cinzel', serif;
+      font-size: 2rem;
+      color: var(--dark);
+      letter-spacing: 4px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .back-link {
+      color: var(--text);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+    }
+
+    .back-link:hover {
+      color: var(--gold);
+    }
+
+    .page-hero {
+      background: var(--beige);
+      padding: 5rem 5% 4rem;
+      text-align: center;
+    }
+
+    .page-hero h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.5rem, 6vw, 4.3rem);
+      color: var(--dark);
+      letter-spacing: 5px;
+      margin-bottom: 1rem;
+    }
+
+    .page-hero p {
+      font-size: 1.35rem;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+    .gold-line {
+      width: 160px;
+      height: 2px;
+      background: var(--gold);
+      margin: 1.5rem auto 0;
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 4rem 5%;
+      font-size: 1.25rem;
+    }
+
+    .intro {
+      font-size: 1.4rem;
+      color: var(--dark);
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+
+    .care-section {
+      background: white;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-left: 4px solid var(--gold);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+    }
+
+    .care-section h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.6rem;
+      color: var(--dark);
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+
+    .care-section p {
+      margin-bottom: 1rem;
+    }
+
+    .care-section ul {
+      padding-left: 1.4rem;
+    }
+
+    .care-section li {
+      margin-bottom: 0.8rem;
+    }
+
+    .warning {
+      background: var(--beige);
+      padding: 1.6rem;
+      margin: 2.5rem 0;
+      text-align: center;
+      font-size: 1.35rem;
+      color: var(--dark);
+      font-style: italic;
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 2rem 5%;
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .content {
+        font-size: 1.15rem;
+        padding: 3rem 7%;
+      }
+
+      .care-section {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="logo">Candle<span>tini.</span></a>
+    <a href="index.html" class="back-link">Retour à l’accueil</a>
+  </header>
+
+  <section class="page-hero">
+    <h1>Entretien des bougies</h1>
+    <p>Quelques gestes simples pour profiter de votre bougie Candletini en toute sécurité, du premier allumage jusqu’à la dernière flamme.</p>
+    <div class="gold-line"></div>
+  </section>
+
+  <main class="content">
+
+    <p class="intro">
+      Chez Candletini, nous souhaitons que chaque bougie vous apporte une expérience douce, chaleureuse et agréable. Pour cela, il est important de respecter quelques conseils d’utilisation et de sécurité.
+    </p>
+
+    <div class="warning">
+      Ne laissez jamais une bougie allumée sans surveillance.
+    </div>
+
+    <section class="care-section">
+      <h2>Avant d’allumer votre bougie</h2>
+
+      <ul>
+        <li>Avant chaque utilisation, coupez la mèche à environ <strong>5 mm</strong>. Cela permet une combustion plus régulière, une flamme plus stable et limite la fumée noire.</li>
+        <li>Placez toujours votre bougie sur une surface stable, résistante à la chaleur et éloignée des objets inflammables.</li>
+        <li>Gardez votre bougie loin des rideaux, papiers, livres, meubles, textiles ou toute autre matière pouvant prendre feu.</li>
+        <li>Ne placez jamais une bougie à proximité d’un courant d’air, d’une fenêtre ouverte ou d’un ventilateur.</li>
+        <li>Gardez toujours les bougies hors de portée des enfants et des animaux.</li>
+      </ul>
+    </section>
+
+    <section class="care-section">
+      <h2>Pendant la combustion</h2>
+
+      <ul>
+        <li>Ne laissez jamais une bougie brûler plus de <strong>4 heures d’affilée</strong>.</li>
+        <li>Ne laissez jamais une bougie allumée sans surveillance, même pour quelques minutes.</li>
+        <li>Ne dormez jamais avec une bougie allumée.</li>
+        <li>Si la flamme devient trop grande, instable ou vacille fortement, éteignez la bougie, laissez-la refroidir, puis recoupez la mèche avant de la rallumer.</li>
+        <li>Pour une meilleure diffusion du parfum, évitez d’ouvrir plusieurs fenêtres pendant les premières minutes d’utilisation.</li>
+        <li>Pour des raisons de sécurité, n’utilisez pas la bougie jusqu’au fond du verre. Arrêtez l’utilisation lorsqu’il reste environ <strong>1 cm de cire</strong>.</li>
+      </ul>
+    </section>
+
+    <section class="care-section">
+      <h2>Après utilisation</h2>
+
+      <ul>
+        <li>Éteignez la bougie avec un éteignoir si possible. Évitez de souffler trop fort sur la flamme.</li>
+        <li>Ne versez jamais d’eau sur une bougie chaude ou allumée.</li>
+        <li>Avant de quitter la pièce, vérifiez que la flamme est complètement éteinte et qu’aucune braise ne reste sur la mèche.</li>
+        <li>Ne touchez pas et ne déplacez pas le verre tant qu’il n’est pas complètement refroidi.</li>
+        <li>Conservez votre bougie dans un endroit frais, sec et à l’abri de la lumière directe du soleil.</li>
+        <li>Gardez la surface de la cire propre, sans poussière ni petits résidus.</li>
+      </ul>
+    </section>
+
+    <section class="care-section">
+      <h2>Réutilisation du verre</h2>
+
+      <p>
+        Une fois votre bougie terminée, le verre Candletini peut être conservé et réutilisé. Après nettoyage, il peut trouver une seconde vie comme verre décoratif, pot à accessoires, rangement pour maquillage, petit vase ou objet de décoration.
+      </p>
+
+      <p>
+        Cette réutilisation fait partie de l’expérience Candletini : une bougie pensée pour illuminer, parfumer et continuer à embellir votre intérieur.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Candletini. Tous droits réservés.</p>
+    <p><a href="index.html">Retour à l’accueil</a></p>
+  </footer>
+
+</body>
+</html>
